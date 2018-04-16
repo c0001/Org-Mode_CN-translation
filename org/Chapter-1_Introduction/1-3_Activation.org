@@ -1,0 +1,43 @@
+* 激活 Activaion
+  从Emacs 22.2开始，以‘.org’后缀命名的文件默认使用Org mode打开，如果你使用跟早版本的Emacs,请在你
+  的‘.emacs’文件中加入：
+  #+BEGIN_SRC emacs-lisp
+  (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+  #+END_SRC
+    
+  Org mode 的buffer需要打开 =font-lock= ，这在Emacs中是默认设置。[fn:1]
+
+  其他一些Elisp包和Org mode会存在一些兼容性问题，请花点时间检查这个列表（查阅 [[info:org#Conflicts][Conflicts]]）。
+
+  有四个Org命令应该为它们设置全局快键键(i.e. 不仅仅在指定的buffer中，在emacs的任何地方)，它们是：
+  - =org-store-link=
+  - =org-capture=
+  - =org-agenda=
+  - =org-iswitchb=
+  这里有几个按键绑定建议，请以此为模板作个人修改基础：
+  #+BEGIN_SRC emacs-lisp
+    (global-set-key "\C-cl" 'org-store-link)
+    (global-set-key "\C-cc" 'org-capture)
+    (global-set-key "\C-ca" 'org-agenda)
+    (global-set-key "\C-cb" 'org-iswitchb)
+  #+END_SRC
+
+  基于这条设定，所有的以‘.org’为扩展名的文件都会被放入Org-mode中。可选择的是，我们可以在一个文件的
+  开头加入如下这一行：
+  #+BEGIN_EXAMPLE
+  MY PROJECTS -*- mode: org; -*-
+  #+END_EXAMPLE
+  这将会选择使用Org-mode来打开这个buffer无论这个文件是如何命名的。同样可以参见另一个变量
+  =org-insert-mode-line-in-empty-file= 。
+
+  Org的许多命令是在一个激活的区域中使用的，要想这样的话，你需要打开 =transient-mark-mode=
+  (=zmacs-region= 对于 XEmacs)，在Emacs23中这是默认设置，在Emacs 22 你需要自己使用
+  =(transient-mark-mode 1)= 来设置。
+
+  如果你不喜欢 =transient-mark-mode= , 你能通过使用鼠标创造一个活动的区域，或在移动光标之前连按两
+  次 =C-<SPC>= 。
+    
+
+* Footnotes
+
+[fn:1] (1) 如果你不使用全局的 =font-lock= , 可以在Org buffer中以这种方式打开它： =(add-hook 'org-mode-hook 'turn-on-font-loack)=

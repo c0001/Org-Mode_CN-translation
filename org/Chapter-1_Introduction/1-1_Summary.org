@@ -1,0 +1,94 @@
+* 概览 Summary 
+  org是一种整理笔记，维护任务列表以及项目计划伴随着快速和有效的纯文本系统的模式。它也是一种伴随着
+  可读性编程和可再生研究得特殊支持的创作系统。
+
+  #+BEGIN_SRC org
+    Org is a mode for keeping notes, maintaining TODO lists, and project planning with a fast and
+    effective plain-text system. It also is an authoring system with unique support for literate
+    programming and reproducible research.
+  #+END_SRC
+    
+  Org模式被实现在大纲模式之上，大纲模式使得它能够让大型文件保持良好的结构化展示。可显示的循环操作
+  和结构化编辑帮助人们以树状方式工作。表格可以很简单的利用内建的表格编辑器创建。纯文本的链接样式的
+  链接链接到网站，email，用户网络信息，BBDB和热门和项目相关的文件。
+  #+BEGIN_EXAMPLE
+  BBDB是一个通讯录管理软件。
+  #+END_EXAMPLE
+
+  #+BEGIN_SRC org
+    Org is implemented on top of Outline mode, which makes it possible to keep the content of large
+    files well structured. Visibility cycling and structure editing help to work with the tree. Tables
+    are easily created with a built-in table editor. Plain text URL-like links connect to websites,
+    emails, Usenet messages, BBDB entries, and any files related to the projects.
+  #+END_SRC
+
+  Org开发由组织的任务，这些任务围绕这笔记文件，这些笔记文件包含着列表或者一些信息，这些信息关于以
+  纯文本方式存储的项目。项目计划和任务管理利用元数据,这些元数据是大纲节点的一部分。基于这种数据，
+  独特的条目可以在查询搜索中提取，并且这种数据创造出动态的日程显示，日程管理 =agenda views=也是综
+  合来Emacs的日历和日记模块。org制造可以用来实现许多不同的项目计划方案，例如David Allen的GTD系统。
+  #+BEGIN_QUOTE
+  [[https://www.youtube.com/watch?v=Qo7vUdKTlhk][David Allen GTD system]]
+  #+END_QUOTE
+
+  #+BEGIN_SRC org
+    Org develops organizational tasks around notes files that contain lists or information about
+    projects as plain text. Project planning and task management makes use of metadata which is part of
+    an outline node. Based on this data, specific entries can be extracted in queries and create dynamic
+    agenda views that also integrate the Emacs calendar and diary.  Org can be used to implement many
+    different project planning schemes, such as David Allen’s GTD system.
+  #+END_SRC
+
+  org文件可以以一种单读的源代码形式的创作系统的凡是服务，它能够输出许多不同的格式，例如：=HTML= ，
+  =latex= , 开源文档和 =Markdown= 文件。新的格式可以从现存的格式导出，或者从编程语言中定义。
+
+  #+BEGIN_SRC org
+    Org files can serve as a single source authoring system with export to many different formats such
+    as HTML, L A TEX, Open Document, and Markdown. New export backends can be derived from existing
+    ones, or defined from scratch.
+  #+END_SRC
+
+  Org文件可以包括源代码区块，这使得Org独特的支持以代码事例的方式创作技术性文章。Org源代码区块是全
+  功能的；它们可以在适当的地方被求值，结果能被在文件中捕获。这使得它能够创建一个单独的伴随着可重现
+  的研究文稿材料的文件。
+
+  #+BEGIN_SRC org
+    Org files can include source code blocks, which makes Org uniquely suited for authoring technical
+    documents with code examples. Org source code blocks are fully functional; they can be evaluated in
+    place and their results can be captured in the file. This makes it possible to create a single file
+    reproducible research compendium.
+  #+END_SRC
+
+  Org使得简单的事情保持简单的特性。首次上手它因该感觉像是很直白的，且大纲是很容易使用的。复杂的特
+  性添加并不是强制的，除非许多功能在需要被使用的时候才被添加。Org是一个工具箱。许多用户实际上之用
+  了org能力的很小一部分功能，而且知道在它们需要的时候，有根多的功能。
+
+  #+BEGIN_SRC org
+    Org keeps simple things simple. When first fired up, it should feel like a straightforward, easy to
+    use outliner. Complexity is not imposed, but a large amount of functionality is available when
+    needed. Org is a toolbox. Many users actually run only a (very personal) fraction of Org’s
+    capabilities, and know that there is more whenever they need it.
+  #+END_SRC
+
+  所有的这些都是从绝对纯文本的文件中获取的，这是最可编写和不会过时的文件格式。Org在Emacs中运行。
+  Emacs是拥有最广扩可移植性质的程序之一，所以org模式在任何主流平台上都是可用的。
+
+  #+BEGIN_SRC org
+    All of this is achieved with strictly plain text files, the most portable and future-proof file
+    format. Org runs in Emacs. Emacs is one of the most widely ported programs, so that Org mode is
+    available on every major platform.
+  #+END_SRC
+
+  这里有一个关于Org的网站，它提供了org版本的最新链接，同样拥有着更多的扩展信息，FAQ，以及使用指南
+  等链接。这一页存放在http://orgmode.org.
+
+  #+BEGIN_SRC org
+    There is a website for Org which provides links to the newest version of Org, as well as additional
+    information, frequently asked questions (FAQ), links to tutorials, etc. This page is located at
+    http://orgmode.org.
+  #+END_SRC
+
+  次手册的早期版本（7.3）存放在[[http://www.network-theory.co.uk/org/manual/][paperback book from Network Theory Ltd.]]
+
+  #+BEGIN_SRC org
+    An earlier version (7.3) of this manual is available as a paperback book from Network Theory Ltd.
+  #+END_SRC

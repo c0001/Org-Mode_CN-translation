@@ -1,0 +1,26 @@
+* 1.4 反馈
+
+  如果你找到关于Org的问题，或者你有设么问题，备注或者关于Org的想法，请邮电至Org的邮件列表
+  <emacs-orgmode@gnu.org>。 如果你不是邮件列表的一个成员，你的邮件会被转移到一个等待版主审核的列表。
+  [fn:1]
+
+  对于bug的提交，请首先尝试复现bug（如果你使用的是较老版本的Org,请使用最新版本的Org,因为这个bug在最
+  新版本已经被修复）。如果这个bug仍然存在，那么准备提交bug并且提供尽可能多的关于这个bug的信息。包括
+  Emacs的版本（ ~M-x Emacs-version RET~ ），和 Org的版本（ ~M-x org-version RET~ ），并且提交你的关
+  于org的配置代码。关于提交bug最方便的方式是使用如下的命令：
+  #+BEGIN_EXAMPLE
+  M-x org-submit-bug-report RET
+  #+END_EXAMPLE
+  这会提交所有的信息到Emacs的mail缓冲区，以便于你只需要输入bug描述就可以了。 如果你不使用Emacs来发送
+  邮件，那么请复制和粘贴这些内容到你的邮件客户端中。
+
+  可能你面对的问题是由于你的Emacs的一个错误或是是你的关于Org mode的设置问题。在提交bug之间，使用最小
+  化的Emacs设置和复现bug流程是很有用的。经常这样做有助于你确定这个bug是因为那你的设置问题还是Org
+  mode它本身的问题。你可以开启一个典型的最小化流程，使用如下命令：
+
+
+* Footnotes
+
+[fn:1] Please consider subscribing to the mailing list, in order to minimize the work the mailing
+list moderators have to do.
+

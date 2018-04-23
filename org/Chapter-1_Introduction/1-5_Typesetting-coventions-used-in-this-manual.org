@@ -1,0 +1,95 @@
+* 1.5 手册中的排版约定
+
+
+TODO关键字，标签，属性等等。
+
+Org 主要使用三种累类型的关键字： TODO关键字， 标签和属性名。 在这个手册中我们使用以下的一些约定：
+
+'TODO'
+'WAITING'
+       TODO 关键字是全部大写的英文单词，这当然包括用户自定义的TODO关键字如上述的'WAITING'
+
+'boss'
+'ARCHIVE'
+       用户自定义的标签全部应当是小写的英文字母，Org mode的预置的特殊意义的标签是全部大写的。
+
+'Release'
+'PRIORTY'
+       用户自定义的属性是是字母大写的，Org mode 的预置属性是全部大写的。
+
+此外，Org 使用选项关键字（如 '#+TITLE' 是用来设置文档主题的） 和环境关键字（如： '#+BEGIN_HTML' 是用
+来触发一个html区域的开头。） 它们通常是用大写在手册中标识的，这是为了增强可读性， 但是你可以在你的文
+档中使用小写[fn:1]。
+
+*快捷键和命令：*
+
+这个手册建议使用两个全局快捷键：'C-c a'绑定 'org-agenda' 和 'C-c c'绑定'org-capture'。这些只是建议，
+但是接下来的手册说明中是假设你使用了这两个快捷键的绑定设置的。
+
+同样，这个手册同时列出快捷键和其相关的函数命令。 Org mode 经常使用同样的快捷键根据上下文环境的区别调
+用不同的功能。 命令名的命名方式是通俗易懂的，列入 'org-metaright'。 在手册中我们将尽可能的给出快捷键
+对应的内部调用函数。 例如在文档结构的章节中，快捷键'M-<right'> 将被设为调用命令 ‘org-do-demote’,
+当在表格章节中这个快捷键是被登记为调用 'org-table-move-column-right'。 如果你愿意，你可以通过在
+'org.texi' 这个手册的源文件中擦除 'cmdnames' 的标记来重新编译成一个没有命令名的手册。
+
+
+* Footnotes
+
+[fn:1] 使用小写字母输入简易模板名和动态混合结果 如 '#+results'
+
+* 原文：
+
+File: org.info,  Node: Conventions,  Prev: Feedback,  Up: Introduction
+
+1.5 Typesetting conventions used in this manual
+===============================================
+
+TODO keywords, tags, properties, etc.
+.....................................
+
+Org mainly uses three types of keywords: TODO keywords, tags and
+property names.  In this manual we use the following conventions:
+
+‘TODO’
+‘WAITING’
+     TODO keywords are written with all capitals, even if they are
+     user-defined.
+‘boss’
+‘ARCHIVE’
+     User-defined tags are written in lowercase; built-in tags with
+     special meaning are written with all capitals.
+‘Release’
+‘PRIORITY’
+     User-defined properties are capitalized; built-in properties with
+     special meaning are written with all capitals.
+
+   Moreover, Org uses option keywords (like ‘#+TITLE’ to set the title)
+and environment keywords (like ‘#+BEGIN_HTML’ to start a ‘HTML’
+environment).  They are written in uppercase in the manual to enhance
+its readability, but you can use lowercase in your Org files(1).
+
+Keybindings and commands
+........................
+
+The manual suggests two global keybindings: ‘C-c a’ for ‘org-agenda’ and
+‘C-c c’ for ‘org-capture’.  These are only suggestions, but the rest of
+the manual assumes that you are using these keybindings.
+
+   Also, the manual lists both the keys and the corresponding commands
+for accessing a functionality.  Org mode often uses the same key for
+different functions, depending on context.  The command that is bound to
+such keys has a generic name, like ‘org-metaright’.  In the manual we
+will, wherever possible, give the function that is internally called by
+the generic command.  For example, in the chapter on document structure,
+‘M-<right>’ will be listed to call ‘org-do-demote’, while in the chapter
+on tables, it will be listed to call ‘org-table-move-column-right’.  If
+you prefer, you can compile the manual without the command names by
+unsetting the flag ‘cmdnames’ in ‘org.texi’.
+
+   ---------- Footnotes ----------
+
+   (1) Easy templates insert lowercase keywords and Babel dynamically
+inserts ‘#+results’.
+
+
+

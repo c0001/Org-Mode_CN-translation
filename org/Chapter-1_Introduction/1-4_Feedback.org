@@ -17,10 +17,142 @@
   可能你面对的问题是由于你的Emacs的一个错误或是是你的关于Org mode的设置问题。在提交bug之间，使用最小
   化的Emacs设置和复现bug流程是很有用的。经常这样做有助于你确定这个bug是因为那你的设置问题还是Org
   mode它本身的问题。你可以开启一个典型的最小化流程，使用如下命令：
+  #+BEGIN_EXAMPLE
+  $ emacs -Q -l /path/to/minimal-org.el
+  #+END_EXAMPLE
 
+  但是如果你使用Emacs内置的Org mode版本，那么使用最小化启动时不必要的。 因为在这种情况下，使用
+  ~emacs -Q~ 就已经足够了。
+  
+  最小化的Org配置可以是这样的：
+  #+BEGIN_SRC emacs-lisp
+    ;;; Minimal setup to load latest 'org-mode'
+
+    ;; active debugging
+    (setq debug-on-error t
+          debug-on-signal nil
+          debug-on-quit nil)
+
+    ;; add latest org-mode to load path
+         (add-to-list 'load-path (expand-file-name "/path/to/org-mode/lisp"))
+         (add-to-list 'load-path (expand-file-name "/path/to/org-mode/contrib/lisp" t))
+  #+END_SRC
+
+  如果错误出现，那么做一个回溯是非常有用的（可以从下面的描述中查看如何创建一个回溯）。 通常一个小的
+  帮助文件的例子带有清晰的相关信息内容：
+  #+BEGIN_SRC org
+      1. 你到底做了哪些？
+      2. 你期望发生什么？
+      3. 什么样的现象覆辙了你的预期？
+    感谢你的帮助优化这个程序。
+  #+END_SRC
+
+  *怎样创建一个有用的状态回溯*
+
+  如果在使用Org时产生一个你搞不懂的错误，你也许逮到了一个bug。 报告这个bug最好的方式是通过提交一个附
+  带上文提及的内容以及一个回溯（_backtrace_）。 backtrace这是一个来自emacs内置的debugger程式的信息，
+  关于这个bug在哪里以及怎样出现的。 下面是创建一个有用的回溯的方法：
+  
+  1. 重新加载没有编译的当前版本的所有Org mode的源代码文件。 如果你通过这个方法，那么回溯信息会包含了
+     很多信息。 要这样做的话，使用如下命令：
+     #+BEGIN_EXAMPLE
+     C-u M-x org-reload RET
+     #+END_EXAMPLE
+     后者选择菜单栏中的 =Org -> Refresh/Reload -> Reload Org uncompiled= 。
+  2. 前往 =Options= 菜单然后选择 =Enter Debugger on Error= （在XEmacx上是通过 =Troubleshooting= 这个
+     子菜单）。
+  3. 接着尽你所能的去复现这个bug，如果捕捉到，那么一个 =*Backtrace*= 缓冲区将会出现在屏幕上。 保存这
+     个缓冲区中的内容到一个文件（例如使用 ~C-x C-w~ ）并且附加其到你的bug报告中。
+     
 
 * Footnotes
 
 [fn:1] Please consider subscribing to the mailing list, in order to minimize the work the mailing
 list moderators have to do.
+
+* 原文
+1.4 Feedback
+============
+
+If you find problems with Org, or if you have questions, remarks, or
+ideas about it, please mail to the Org mailing list
+<emacs-orgmode@gnu.org>.  If you are not a member of the mailing list,
+your mail will be passed to the list after a moderator has approved
+it(1).
+
+   For bug reports, please first try to reproduce the bug with the
+latest version of Org available—if you are running an outdated version,
+it is quite possible that the bug has been fixed already.  If the bug
+persists, prepare a report and provide as much information as possible,
+including the version information of Emacs (‘M-x emacs-version <RET>’)
+and Org (‘M-x org-version RET’), as well as the Org related setup in
+‘.emacs’.  The easiest way to do this is to use the command
+     M-x org-submit-bug-report RET
+which will put all this information into an Emacs mail buffer so that
+you only need to add your description.  If you re not sending the Email
+from within Emacs, please copy and paste the content into your Email
+program.
+
+   Sometimes you might face a problem due to an error in your Emacs or
+Org mode setup.  Before reporting a bug, it is very helpful to start
+Emacs with minimal customizations and reproduce the problem.  Doing so
+often helps you determine if the problem is with your customization or
+with Org mode itself.  You can start a typical minimal session with a
+command like the example below.
+
+     $ emacs -Q -l /path/to/minimal-org.el
+
+   However if you are using Org mode as distributed with Emacs, a
+minimal setup is not necessary.  In that case it is sufficient to start
+Emacs as ‘emacs -Q’.  The ‘minimal-org.el’ setup file can have contents
+as shown below.
+
+     ;;; Minimal setup to load latest 'org-mode'
+
+     ;; activate debugging
+     (setq debug-on-error t
+           debug-on-signal nil
+           debug-on-quit nil)
+
+     ;; add latest org-mode to load path
+     (add-to-list 'load-path (expand-file-name "/path/to/org-mode/lisp"))
+     (add-to-list 'load-path (expand-file-name "/path/to/org-mode/contrib/lisp" t))
+
+   If an error occurs, a backtrace can be very useful (see below on how
+to create one).  Often a small example file helps, along with clear
+information about:
+
+  1. What exactly did you do?
+  2. What did you expect to happen?
+  3. What happened instead?
+Thank you for helping to improve this program.
+
+How to create a useful backtrace
+................................
+
+If working with Org produces an error with a message you don’t
+understand, you may have hit a bug.  The best way to report this is by
+providing, in addition to what was mentioned above, a _backtrace_.  This
+is information from the built-in debugger about where and how the error
+occurred.  Here is how to produce a useful backtrace:
+
+  1. Reload uncompiled versions of all Org mode Lisp files.  The
+     backtrace contains much more information if it is produced with
+     uncompiled code.  To do this, use
+          C-u M-x org-reload RET
+     or select ‘Org -> Refresh/Reload -> Reload Org uncompiled’ from the
+     menu.
+  2. Go to the ‘Options’ menu and select ‘Enter Debugger on Error’
+     (XEmacs has this option in the ‘Troubleshooting’ sub-menu).
+  3. Do whatever you have to do to hit the error.  Don’t forget to
+     document the steps you take.
+  4. When you hit the error, a ‘*Backtrace*’ buffer will appear on the
+     screen.  Save this buffer to a file (for example using ‘C-x C-w’)
+     and attach it to your bug report.
+
+   ---------- Footnotes ----------
+
+   (1) Please consider subscribing to the mailing list, in order to
+minimize the work the mailing list moderators have to do.
+
 

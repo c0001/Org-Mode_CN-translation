@@ -71,6 +71,7 @@
 list moderators have to do.
 
 * 原文
+#+BEGIN_EXAMPLE
 1.4 Feedback
 ============
 
@@ -156,3 +157,5 @@ occurred.  Here is how to produce a useful backtrace:
 minimize the work the mailing list moderators have to do.
 
 
+
+#+END_EXAMPLE

@@ -41,6 +41,7 @@
 
 [fn:1] (1) 如果你不使用全局的 =font-lock= , 可以在Org buffer中以这种方式打开它： =(add-hook 'org-mode-hook 'turn-on-font-loack)=
 * 原文
+#+BEGIN_EXAMPLE
 1.3 Activation
 ==============
 
@@ -87,3 +88,4 @@ twice before moving the cursor.
    (1) If you don’t use font-lock globally, turn it on in Org buffer
 with ‘(add-hook 'org-mode-hook 'turn-on-font-lock)’
 
+#+END_EXAMPLE

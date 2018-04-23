@@ -39,6 +39,7 @@ Org 主要使用三种累类型的关键字： TODO关键字， 标签和属性�
 
 * 原文：
 
+#+BEGIN_EXAMPLE
 File: org.info,  Node: Conventions,  Prev: Feedback,  Up: Introduction
 
 1.5 Typesetting conventions used in this manual
@@ -91,5 +92,4 @@ unsetting the flag ‘cmdnames’ in ‘org.texi’.
    (1) Easy templates insert lowercase keywords and Babel dynamically
 inserts ‘#+results’.
 
-
-
+#+END_EXAMPLE

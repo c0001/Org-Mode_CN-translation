@@ -12,9 +12,12 @@ Org-version: 8.2.10
   - [[Chapter-1_Introduction/1-2_Installation.org][第二节：安装]]
   - [[Chapter-1_Introduction/1-3_Activation.org][第三节：激活]]
   - [[Chapter-1_Introduction/1-4_Feedback.org][第四节：反馈]]
+  - [[file:Chapter-1_Introduction/1-5_Typesetting-coventions-used-in-this-manual.org][第五节：排版约定]]
 
 Update log:
 - [2018-04-17 Tue 07:25:55] 第一章，第四节更新中
+- [2018-04-23 Mon 10:31:55] 第一章，第五节点翻译完毕
+
 
     
 

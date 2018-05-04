@@ -14,7 +14,7 @@ Org-version: 8.2.10
   - [[file:org/Chapter-1_Introduction/1-4_Feedback.org][第四节：反馈]]
   - [[file:org/Chapter-1_Introduction/1-5_Typesetting-coventions-used-in-this-manual.org][第五节：排版约定]]
 - [[file:org/Chapter-2_Document-structure/index.org][第二章：文档结构]]
-  - [[file:org/Chapter-2_Document-structure/Outlines.org][第一节：大纲]]
+  - [[file:org/Chapter-2_Document-structure/2-01_Outlines.org][第一节：大纲]]
 
 Update log:
 - [2018-04-17 Tue 07:25:55] 第一章，第四节更新中

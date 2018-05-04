@@ -40,7 +40,7 @@
 * Footnotes
 
 [fn:1] (1) 如果你不使用全局的 =font-lock= , 可以在Org buffer中以这种方式打开它： =(add-hook 'org-mode-hook 'turn-on-font-loack)=
-* 原文
+* COMMENT 原文
 #+BEGIN_EXAMPLE
 1.3 Activation
 ==============

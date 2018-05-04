@@ -4,7 +4,7 @@
   碎记录的最好的方式。 这种结构的概览式展现是通过展开(隐藏)文档中的大块区域来展现仅有的简略的概括性
   文档结构和正在编辑的部分。Org极大的简化了使用大纲模式的方法，而这是通过压缩整个 展开或隐藏 功能成
   一个单独的命令， “org-cycle” ， 这个命令被绑定到了 <TAB> 键。
-* 原文
+* COMMENT 原文
 #+BEGIN_SRC org
   File: org.info,  Node: Outlines,  Next: Headlines,  Prev: Document Structure,  Up: Document Structure
 

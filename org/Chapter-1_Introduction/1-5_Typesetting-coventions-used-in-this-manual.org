@@ -37,7 +37,7 @@ Org 主要使用三种累类型的关键字： TODO关键字， 标签和属性�
 
 [fn:1] 使用小写字母输入简易模板名和动态混合结果 如 '#+results'
 
-* 原文：
+* COMMENT 原文：
 
 #+BEGIN_EXAMPLE
 File: org.info,  Node: Conventions,  Prev: Feedback,  Up: Introduction

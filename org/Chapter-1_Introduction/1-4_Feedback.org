@@ -63,14 +63,13 @@
      子菜单）。
   3. 接着尽你所能的去复现这个bug，如果捕捉到，那么一个 =*Backtrace*= 缓冲区将会出现在屏幕上。 保存这
      个缓冲区中的内容到一个文件（例如使用 ~C-x C-w~ ）并且附加其到你的bug报告中。
-     
 
 * Footnotes
 
 [fn:1] Please consider subscribing to the mailing list, in order to minimize the work the mailing
 list moderators have to do.
 
-* 原文
+* COMMENT 原文
 #+BEGIN_EXAMPLE
 1.4 Feedback
 ============

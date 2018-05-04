@@ -1,0 +1,26 @@
+# -*- mode: org; -*-
+#+STARTUP: hideblocks overview
+
+Emacs version: 25.3.1
+Org-version: 8.2.10
+
+这个仓库存档的是Org mode的当前版本的中文翻译，尽可能以每天一个小结的方式更新。
+
+目录：
+- [[file:org/Chapter-1_Introduction][第一章：介绍]]
+  - [[file:org/Chapter-1_Introduction/1-1_Summary.org][第一节：概览]]
+  - [[file:org/Chapter-1_Introduction/1-2_Installation.org][第二节：安装]]
+  - [[file:org/Chapter-1_Introduction/1-3_Activation.org][第三节：激活]]
+  - [[file:org/Chapter-1_Introduction/1-4_Feedback.org][第四节：反馈]]
+  - [[file:org/Chapter-1_Introduction/1-5_Typesetting-coventions-used-in-this-manual.org][第五节：排版约定]]
+- [[file:org/Chapter-2_Document-structure/index.org][第二章：文档结构]]
+  - [[file:org/Chapter-2_Document-structure/Outlines.org][第一节：大纲]]
+
+Update log:
+- [2018-04-17 Tue 07:25:55] 第一章，第四节更新中
+- [2018-04-23 Mon 10:31:55] 第一章，第五节点翻译完毕
+- [2018-05-05 Sat 05:52:49] 第二章，第一节翻译完毕
+
+
+    
+

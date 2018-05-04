@@ -1,0 +1,24 @@
+* 2.1 大纲
+
+  Org是基于Outline mode而实现的。 大纲模式允许文档被组织成一种纵向的结构，这种纵向结构是展现笔记和零
+  碎记录的最好的方式。 这种结构的概览式展现是通过展开(隐藏)文档中的大块区域来展现仅有的简略的概括性
+  文档结构和正在编辑的部分。Org极大的简化了使用大纲模式的方法，而这是通过压缩整个 展开或隐藏 功能成
+  一个单独的命令， “org-cycle” ， 这个命令被绑定到了 <TAB> 键。
+* 原文
+#+BEGIN_SRC org
+  File: org.info,  Node: Outlines,  Next: Headlines,  Prev: Document Structure,  Up: Document Structure
+
+  2.1 Outlines
+  ============
+
+  Org is implemented on top of Outline mode.  Outlines allow a document to
+  be organized in a hierarchical structure, which (at least for me) is the
+  best representation of notes and thoughts.  An overview of this
+  structure is achieved by folding (hiding) large parts of the document to
+  show only the general document structure and the parts currently being
+  worked on.  Org greatly simplifies the use of outlines by compressing
+  the entire show/hide functionality into a single command, ‘org-cycle’,
+  which is bound to the <TAB> key.
+
+
+#+END_SRC

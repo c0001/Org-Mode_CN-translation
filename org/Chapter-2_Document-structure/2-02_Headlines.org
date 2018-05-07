@@ -1,0 +1,68 @@
+* 2.2 标题
+
+  标题定义了文档大纲树的结构。 Org的标题起始于一个或多个位于文档左边缘的星号[fn:1] [fn:2]。 例如：
+
+  #+BEGIN_SRC org
+    ,* Top level headline
+    ,** Second level
+    ,*** 3rd level
+        some text
+    ,*** 3rd level
+        more text
+
+    ,* Another top level headline
+  #+END_SRC
+  
+  有些用户发觉多个星号实在是太恼人了， 并且迫切想要让一个标题仅仅使用一个星号伴随着空格符来表示标题
+  层级。基于这种定制请查阅 [[../Chapter-15_Miscellaneous/15-08_Clean-view.org][Clean view]] 通过理解设置描述来获得这个效果。
+
+  子树最后的一个空行被视为是此树的一部分，但是如果你有两个空行，其中一个空行将会被保留着成为可视的一
+  部分（在循环层级变换中），这样做是为了结构化堆叠视角。 请查阅 =org-cycle-separator-lines= 变量描述
+  来获得如何自定义这个效果的方式。
+
+* Footnotes
+
+[fn:2] 时钟记时功能仅仅作用于小于30个星号的标题栏。
+
+[fn:1] 参见变量 =org-special-ctrl-a/e=, =org-special-ctrl-k= , 以及 =org-ctrl-k-protect-subtree=，
+它们是用来改变 'C-a' 'C-e' 和 'C-k' 快捷键在标题栏上的特殊行为。
+
+* COMMENT 原文
+  #+BEGIN_EXAMPLE
+    File: org.info,  Node: Headlines,  Next: Visibility cycling,  Prev: Outlines,  Up: Document Structure
+
+    2.2 Headlines
+    =============
+
+    Headlines define the structure of an outline tree.  The headlines in Org
+    start with one or more stars, on the left margin(1) (2).  For example:
+
+         ,* Top level headline
+         ,** Second level
+         ,*** 3rd level
+             some text
+         ,*** 3rd level
+             more text
+
+         ,* Another top level headline
+
+    Some people find the many stars too noisy and would prefer an outline
+    that has whitespace followed by a single star as headline starters.
+    ,*note Clean view::, describes a setup to realize this.
+
+       An empty line after the end of a subtree is considered part of it and
+    will be hidden when the subtree is folded.  However, if you leave at
+    least two empty lines, one empty line will remain visible after folding
+    the subtree, in order to structure the collapsed view.  See the variable
+    ‘org-cycle-separator-lines’ to modify this behavior.
+
+       ---------- Footnotes ----------
+
+       (1) See the variables ‘org-special-ctrl-a/e’, ‘org-special-ctrl-k’,
+    and ‘org-ctrl-k-protect-subtree’ to configure special behavior of ‘C-a’,
+    ‘C-e’, and ‘C-k’ in headlines.
+
+       (2) Clocking only works with headings indented less then 30 stars.
+
+
+  #+END_EXAMPLE

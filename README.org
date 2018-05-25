@@ -1,14 +1,15 @@
 # -*- mode: org; -*-
 #+STARTUP: hideblocks overview
+#+TITLE: Org Mode 手册中文翻译项目
 
-Emacs version: 25.3.1
+
+[[file:annex/img/org-mode-unicorn-logo_2018-05-25_15-34-38.png]]
+
+
+Emacs version: 25.3.1 \\
 Org-version: 9.1.13
 
-#+BEGIN_QUOTE
-这个仓库存档的是Org mode的当前版本的中文翻译，尽可能以每天一个小结的方式更新。
-#+END_QUOTE
-
-org mode是一个emacs内置的简单的非所见即所得的文档处理插件，它虽然没有华丽的界面，但是它拥有着一个基
+Org Mode是一个emacs内置的简单的非所见即所得的文档处理插件，它虽然没有华丽的界面，但是它拥有着一个基
 本的简单却强大的大纲模式以及丰富的逻辑链。使用Org Mode不仅可以让你可以像markdown一样编写纯文本的文档，
 你还可以使用Org Mode来进行时间管理，以及日记，便利贴等任务。
 
@@ -29,17 +30,12 @@ Mode的朋友免除阅读方面的限制，开始建立这个基于Org Mode 9.1.
 - [[file:org/Chapter-2_Document-structure/index.org][第二章：文档结构]]
   - [[file:org/Chapter-2_Document-structure/2-01_Outlines.org][2.1：大纲]]
   - [[file:org/Chapter-2_Document-structure/2-02_Headlines.org][2.2：标题栏]]
-  - [[org/Chapter-2_Document-structure/2-03_Visibility-cycling.org][2.3：可视化循环折叠]]
-    - [[org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-01_Global-and-local-cycling.org][2.3.1：全局和本地循环折叠]]
-    - [[org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-02_Initial-visibility.org][2.3.2：初始化可视化设置]]
-    - [[org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-03_Catching-invisible-edits.org][2.3.3：限制不可视区域的编辑]]
+  - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling.org][2.3：可视化循环折叠]]
+    - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-01_Global-and-local-cycling.org][2.3.1：全局和本地循环折叠]]
+    - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-02_Initial-visibility.org][2.3.2：初始化可视化设置]]
+    - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-03_Catching-invisible-edits.org][2.3.3：限制不可视区域的编辑]]
 
-Update log:
-- [2018-04-17 Tue 07:25:55] 第一章，第四节更新中。
-- [2018-04-23 Mon 10:31:55] 第一章，第五节点翻译完毕。
-- [2018-05-05 Sat 05:52:49] 第二章，第一节翻译完毕。
-- [2018-05-07 Mon 21:20:39] 第二章，第二节翻译完毕。
-- [2018-05-25 Fri 13:32:15] 第二章，第三节以及第三节第一分节翻译完毕。
+[[file:Change-Log.org][Update log]]
 
 
     

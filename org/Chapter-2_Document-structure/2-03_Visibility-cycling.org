@@ -1,0 +1,10 @@
+* 2.3 可视化循环折叠
+
+  *菜单列表：*
+  
+  - [[file:2-03_Visibility-cycling/2-03-01_Global-and-local-cycling.org][全局和本地循环折叠]]     通过纷繁多样的可视化状态循环折叠
+  - [[file:2-03_Visibility-cycling/2-03-02_Initial-visibility.org][初始化可视化设置]]       生活中初始化的显示状态
+  - [[file:2-03_Visibility-cycling/2-03-03_Catching-invisible-edits.org][限制不可见的内容的编辑]] 防止编辑不可见的内容而带来的失误
+
+    
+    

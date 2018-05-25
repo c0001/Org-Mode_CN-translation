@@ -1,0 +1,154 @@
+*  2.3.1 全局和本地循环折叠
+
+  大纲模式使得在缓冲区隐藏一部分文字区域的设想变为可能。 Org仅仅使用两个命令， <TAB> 和 S-<TAB> 来切
+  换可视化折叠视角。
+
+'<TAB>'             函数 ('org-cycle')
+
+                    子树循环折叠：基于现状折叠当前子树。
+
+                    ,-> 折叠当前标题 -> 展开子树列表 -> 展开所有子树 --.
+                    '------------------------------------------------'
+
+                    光标必需处于标题栏中才能使用这个功能。[fn:1]
+----------------------------------------------------------------------------------------------------
+
+
+'S-<TAB>'            函数 ('org-global-cycle')
+            
+                     全局循环折叠： 循环切换整个buffer的显示状态
+
+                     ,-> 折叠整个buffer -> 显示折叠列表 -> 显示所有的内容 --.
+                     '----------------------------------------------------'
+
+                     当 使用 'S-<TAB>' 时候启用前缀重复命令 N， 将展开N等级的标题栏，注意在表格中，
+                     'S-<TAB>' 是用来跳转到先前的区域的。
+
+                     你可以在缓冲区的最开头使用<TAB>（光标并不在标题栏中）充当全局循环折叠功能，此时变量
+                     'org-cycle-global-at-bob'应该被设置为真。
+----------------------------------------------------------------------------------------------------
+
+
+'C-u C-u <TAB>'      函数 ('org-set-startup-visibility')
+
+                     切换到缓冲区初始化的可视化转胎（请参阅 [[file:2-03-02_Initial-visibility.org][初始化可视状态设置]] ）
+----------------------------------------------------------------------------------------------------
+
+
+'C-u C-u C-u <TAB>'  函数 ('outline-show-all')
+
+                     显示所有的内容，包括抽屉内容。
+----------------------------------------------------------------------------------------------------
+
+
+'C-c C-r'            函数 ('org-reveal')
+          
+                     显示当前光标内容周围的内容，显示当前条目，以及其之侯的标题和之上的标题。 这是一
+                     个十分有用的功能，它可以在一个被稀疏树命令（请参阅 [[file:../2-06_Sparse-trees.org][稀疏树]]）展开的或者是被日程表
+                     命令（请参阅 [[file:../../Chapter-10-Agenda_views/10-5_Commands-in-the-agenda-buffer.org][日程表]]）展开的地方用来帮助你方便的通过上下文来工作。
+
+                     如果带有一个前缀命令的话，显示所有姊妹的标题栏条目，如果是带有双前缀命令的话，则
+                     还显示额外的姊妹标题栏的子树的完整的内容。
+----------------------------------------------------------------------------------------------------
+
+
+'C-c C-k'            函数 ('outline-show-branches')
+             
+                     显示所有的当前标题栏下一级的子树标题栏，也就是只显示当前标题栏的所有子树列表。
+----------------------------------------------------------------------------------------------------
+
+
+'C-c <TAB>'          函数 ('outline-show-children')
+
+                     和'C-c C-k'一样，但是支持前缀命令，前缀N则代表显示几个层级的子标题。
+----------------------------------------------------------------------------------------------------
+
+
+'C-c C-x b'          函数 ('org-tree-to-indirect-buffer')
+ 
+                     显示当前子树到另一个间接的buffer中[fn:2]
+----------------------------------------------------------------------------------------------------
+
+
+'C-c C-x v'          函数 ('org-copy-visible')
+  
+                     复制可见的选择部份到剪贴板中。
+
+
+* Footnotes
+
+[fn:2] 间接buffer（参见emacs文档中的Indirect Buffers章节）将会把当前的标题以及它的子树完整的类似于复
+刻的方式搬到这个buffer中。编辑间接buffer中的内容同时也会改变原buffer中的映射出来的内容，只是原来的
+buffer中的那一部分如果被折叠的话是无法看到实时的同步预览的。
+
+[fn:1] 查看如果不是在标题栏中，TAB键的使用状态的选项设置变量 'org-cycle-emulate-tab'。
+* 原文
+  #+BEGIN_SRC org
+    File: org,  Node: Global and local cycling,  Next: Initial visibility,  Up: Visibility cycling
+
+    2.3.1 Global and local cycling
+    ------------------------------
+
+    Outlines make it possible to hide parts of the text in the buffer.  Org
+    uses just two commands, bound to <TAB> and ‘S-<TAB>’ to change the
+    visibility in the buffer.
+
+    ‘<TAB>’     (‘org-cycle’)
+         _Subtree cycling_: Rotate current subtree among the states
+
+              ,-> FOLDED -> CHILDREN -> SUBTREE --.
+              '-----------------------------------'
+
+         The cursor must be on a headline for this to work(1).
+
+    ‘S-<TAB>’     (‘org-global-cycle’)
+    C-u <TAB>
+         _Global cycling_: Rotate the entire buffer among the states
+
+              ,-> OVERVIEW -> CONTENTS -> SHOW ALL --.
+              '--------------------------------------'
+
+         When ‘S-<TAB>’ is called with a numeric prefix argument N, the
+         CONTENTS view up to headlines of level N will be shown.  Note that
+         inside tables, ‘S-<TAB>’ jumps to the previous field.
+
+         You can run global cycling using <TAB> only if point is at the very
+         beginning of the buffer, but not on a headline, and
+         ‘org-cycle-global-at-bob’ is set to a non-‘nil’ value.
+
+    ‘C-u C-u <TAB>’     (‘org-set-startup-visibility’)
+         Switch back to the startup visibility of the buffer (*note Initial
+         visibility::).
+    ‘C-u C-u C-u <TAB>’     (‘outline-show-all’)
+         Show all, including drawers.
+    ‘C-c C-r’     (‘org-reveal’)
+         Reveal context around point, showing the current entry, the
+         following heading and the hierarchy above.  Useful for working near
+         a location that has been exposed by a sparse tree command (*note
+         Sparse trees::) or an agenda command (*note Agenda commands::).
+         With a prefix argument show, on each level, all sibling headings.
+         With a double prefix argument, also show the entire subtree of the
+         parent.
+    ‘C-c C-k’     (‘outline-show-branches’)
+         Expose all the headings of the subtree, CONTENTS view for just one
+         subtree.
+    ‘C-c <TAB>’     (‘outline-show-children’)
+         Expose all direct children of the subtree.  With a numeric prefix
+         argument N, expose all children down to level N.
+    ‘C-c C-x b’     (‘org-tree-to-indirect-buffer’)
+         Show the current subtree in an indirect buffer(2).  With a numeric
+         prefix argument N, go up to level N and then take that tree.  If N
+         is negative then go up that many levels.  With a ‘C-u’ prefix, do
+         not remove the previously used indirect buffer.
+    ‘C-c C-x v’     (‘org-copy-visible’)
+         Copy the visible text in the region into the kill ring.
+
+       ---------- Footnotes ----------
+
+       (1) see, however, the option ‘org-cycle-emulate-tab’.
+
+       (2) The indirect buffer (*note (emacs)Indirect Buffers::) will
+    contain the entire buffer, but will be narrowed to the current tree.
+    Editing the indirect buffer will also change the original buffer, but
+    without affecting visibility in that buffer.
+  #+END_SRC

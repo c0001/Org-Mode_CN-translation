@@ -1,0 +1,70 @@
+* 2.3.2 初始化可视化设置
+
+  当你每次打开一个org文件的时候，全局状态是设置为折叠所有标题栏的，例如只有最上层的标题是可见的（也
+  就是最顶级的标题）[fn:1]。 这种状态是可以通过变量‘org-startup-folded’，或者以每一个org文件为基础
+  添加如下的几行文字的其中一行到该文件的任何位置：
+
+  #+BEGIN_SRC org
+  ,#+STARTUP: overview
+  ,#+STARTUP: content
+  ,#+STARTUP: showall
+  ,#+STARTUP: showeverything
+  #+END_SRC
+
+  此外，任何带有可见属性（VISIBILIITY）的条目（参见[[file:../../Chapter-7_Properties-and-columns/index.org][属性和列显示模式]]）将会相应的调整它们的显示方式，
+  这个属性的可用值是：
+
+  - folded
+  - children
+  - content
+  - all
+
+----------------------------------------------------------------------------------------------------
+
+‘C-u C-u <TAB>’     函数  (‘org-set-startup-visibility’)
+
+                   使得buffer切回到初始化设置的显示状态，即：任何内容都被初始化设置要求的状态还原，
+                   和带有可视化属性的条目也被还原至其属性设置的状态。
+
+* Footnotes
+
+[fn:1] 当‘org-agenda-inhibit-startup’ 是有效的时候，当agenda首次打开一个文件，Org是不会按照默认的
+显示设置来显示内容的（参见 [[file:../../Appendix-A-Hacking/A-9_Speeding-up-your-agendas.org][speeding up your agendas]]）。
+* 原文
+#+BEGIN_SRC org
+  File: org,  Node: Initial visibility,  Next: Catching invisible edits,  Prev: Global and local cycling,  Up: Visibility cycling
+
+  2.3.2 Initial visibility
+  ------------------------
+
+  When Emacs first visits an Org file, the global state is set to
+  OVERVIEW, i.e., only the top level headlines are visible(1).  This can
+  be configured through the variable ‘org-startup-folded’, or on a
+  per-file basis by adding one of the following lines anywhere in the
+  buffer:
+
+       ,#+STARTUP: overview
+       ,#+STARTUP: content
+       ,#+STARTUP: showall
+       ,#+STARTUP: showeverything
+
+  Furthermore, any entries with a ‘VISIBILITY’ property (*note Properties
+  and columns::) will get their visibility adapted accordingly.  Allowed
+  values for this property are ‘folded’, ‘children’, ‘content’, and ‘all’.
+
+  ‘C-u C-u <TAB>’     (‘org-set-startup-visibility’)
+       Switch back to the startup visibility of the buffer, i.e., whatever
+       is requested by startup options and ‘VISIBILITY’ properties in
+       individual entries.
+
+     ---------- Footnotes ----------
+
+     (1) When ‘org-agenda-inhibit-startup’ is non-‘nil’, Org will not
+  honor the default visibility state when first opening a file for the
+  agenda (*note Speeding up your agendas::).
+
+
+#+END_SRC
+
+
+

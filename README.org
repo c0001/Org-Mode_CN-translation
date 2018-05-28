@@ -16,26 +16,75 @@ Org Mode是一个emacs内置的简单的非所见即所得的文档处理插件�
 由于Org Mode的官方文档是纯英文的，因此我为了自己更好的学习Org Mode，并且同时也希望让更多想要学习使用Org
 Mode的朋友免除阅读方面的限制，开始建立这个基于Org Mode 9.1.13 版本的中文翻译项目。
 
-但是由于个人的时间精力有限，我还是希望能有志愿者愿意和我一起来齐力进行这个项目。 后续我会张贴合作详
-情规则。
+但是由于个人的时间精力有限，我还是希望能有志愿者愿意和我一起来齐力进行这个项目。这是一个[[*Contirbuting Rule][简单的合作细则]]。
+
 
 
 *目录：*
-- [[file:org/Chapter-1_Introduction][第一章：介绍]]
-  - [[file:org/Chapter-1_Introduction/1-1_Summary.org][1.1：概览]]
-  - [[file:org/Chapter-1_Introduction/1-2_Installation.org][1.2：安装]]
-  - [[file:org/Chapter-1_Introduction/1-3_Activation.org][1.3：激活]]
-  - [[file:org/Chapter-1_Introduction/1-4_Feedback.org][1.4：反馈]]
-  - [[file:org/Chapter-1_Introduction/1-5_Typesetting-coventions-used-in-this-manual.org][1.5：排版约定]]
-- [[file:org/Chapter-2_Document-structure/index.org][第二章：文档结构]]
-  - [[file:org/Chapter-2_Document-structure/2-01_Outlines.org][2.1：大纲]]
-  - [[file:org/Chapter-2_Document-structure/2-02_Headlines.org][2.2：标题栏]]
-  - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling.org][2.3：可视化循环折叠]]
-    - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-01_Global-and-local-cycling.org][2.3.1：全局和本地循环折叠]]
-    - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-02_Initial-visibility.org][2.3.2：初始化可视化设置]]
-    - [[file:org/Chapter-2_Document-structure/2-03_Visibility-cycling/2-03-03_Catching-invisible-edits.org][2.3.3：限制不可视区域的编辑]]
+- [[file:org/1_Introduction][第一章：介绍]]
+  - [[file:org/1_Introduction/1-1_Summary.org][1.1：概览]]
+  - [[file:org/1_Introduction/1-2_Installation.org][1.2：安装]]
+  - [[file:org/1_Introduction/1-3_Activation.org][1.3：激活]]
+  - [[file:org/1_Introduction/1-4_Feedback.org][1.4：反馈]]
+  - [[file:org/1_Introduction/1-5_Typesetting-coventions-used-in-this-manual.org][1.5：排版约定]]
+- [[file:org/2_Document-structure/index.org][第二章：文档结构]]
+  - [[file:org/2_Document-structure/2-1_Outlines.org][2.1：大纲]]
+  - [[file:org/2_Document-structure/2-2_Headlines.org][2.2：标题栏]]
+  - [[file:org/2_Document-structure/2-3_Visibility-cycling.org][2.3：可视化循环折叠]]
+    - [[file:org/2_Document-structure/2-3_Visibility-cycling/2-3-1_Global-and-local-cycling.org][2.3.1：全局和本地循环折叠]]
+    - [[file:org/2_Document-structure/2-3_Visibility-cycling/2-3-2_Initial-visibility.org][2.3.2：初始化可视化设置]]
+    - [[file:org/2_Document-structure/2-3_Visibility-cycling/2-3-3_Catching-invisible-edits.org][2.3.3：限制不可视区域的编辑]]
 
-[[file:Change-Log.org][Update log]]
+
+* Contirbuting Rule
+  
+  以下是项目合作的方法，现阶段还未有志愿者加入，因此，条目相对简单，以后随着对伍的扩大，会更加的细致
+  化合作细则的。
+  
+** 命名
+
+   由于整个org的文档说明中使用链接形式的地方相当地多（主要是各个文件之间的链接），因此如果对文件名无
+   法做到统一规范会导致，今后的维护难度相当的大。
+
+   在整个org的文档结构上保持着和其它著作文档一样的章节附录结构，因此只需要对其的文档结构命名给出一定
+   的转换方式就可以了。
+   
+   这种转换方式就是：
+   1. 把所有的点符号 =.= 转换为 =-=
+   2. 把所有的空格转换为 =-= 或 =_=
+      
+
+   对于方式2的转换条件:
+
+   在文档结构中一般的一个节点的命名方式是按照节点名和扩展名合并的方式进行的,例如:
+   #+BEGIN_EXAMPLE
+   =8 Dates and times =   
+   8 为节点名
+   Date and times是扩展名
+   #+END_EXAMPLE
+
+   那么节点与扩展名之间的空格用下划线 =_= 代替,扩展名中的空格用 =-= 代替.
+
+   那么以上的例子转换后就是 =8_Dates-and-times=
+   
+   另外对于次级章节的文件夹命名，它的名字就是和章节介绍文件名一样。
+
+** 分领制度
+
+   任何一个项目合作伙伴都可以申领一些文档节点进行翻译，这里的节点的最小单位是一个完整的小节。当一个
+   节点有人申领了，其它人不能再申领这个节点翻译任务，但是可以申请参与翻译（这只对于节点单位大于小节
+   的任务有效）。
+   
+   申领项目和申领人以及参与者纪录在仓库根目录 =elements/project-apply.org= 中。
+
+   除了翻译项目外，检阅文档，查错纰漏以及其它临时想做的也是任务，但是这种任务是需要项目组进行先建立，
+   然后再供项目合作者申领的。 这样的任务被称为广播任务，纪录在 =elements/TODO.org= 文件中。同样的任
+   务申领也是使用上述翻译任务同样的申领表中。
+
+
+   
+   
+* [[file:Change-Log.org][Update log]]
 
 
     

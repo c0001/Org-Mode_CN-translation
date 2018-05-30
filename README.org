@@ -84,7 +84,7 @@ Mode的朋友免除阅读方面的限制，开始建立这个基于Org Mode 9.1.
 
    
    
-* [[file:Change-Log.org][Update log]]
+* [[file:elements/Change-Log.org][Update log]]
 
 
     

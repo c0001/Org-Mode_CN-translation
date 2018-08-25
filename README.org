@@ -34,7 +34,7 @@ Mode的朋友免除阅读方面的限制，开始建立这个基于Org Mode 9.1.
     - [[file:org/2_Document-structure/2-3_Visibility-cycling/2-3-1_Global-and-local-cycling.org][2.3.1：全局和本地循环折叠]]
     - [[file:org/2_Document-structure/2-3_Visibility-cycling/2-3-2_Initial-visibility.org][2.3.2：初始化可视化设置]]
     - [[file:org/2_Document-structure/2-3_Visibility-cycling/2-3-3_Catching-invisible-edits.org][2.3.3：限制不可视区域的编辑]]
-
+  - [[file:org/2_Document-structure/2-4_Motion.org][2.4: 移动]]
 
 * Contirbuting Rule
   

@@ -3,7 +3,8 @@
   有时候你也许无心的编辑了buffer中的不可见的部份并且开始困惑于编辑了哪些内容和怎样撤消这些错误的无心
   的操作。此时如果你设置‘org-catch-invisible-edits’ 为有效，那么这将会帮助你防止下次产生这种无心的
   操作。你可以查看这个变量的内容描述来了解Org是怎样限制不可见区域的编辑操作的或者它是怎样处理它们的。
-* 原文
+
+* COMMENT 原文
 #+BEGIN_EXAMPLE
 File: org,  Node: Catching invisible edits,  Prev: Initial visibility,  Up: Visibility cycling
 

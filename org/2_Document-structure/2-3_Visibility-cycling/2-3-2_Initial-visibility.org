@@ -30,7 +30,8 @@
 
 [fn:1] 当‘org-agenda-inhibit-startup’ 是有效的时候，当agenda首次打开一个文件，Org是不会按照默认的
 显示设置来显示内容的（参见 [[file:../../Appendix-A-Hacking/A-9_Speeding-up-your-agendas.org][speeding up your agendas]]）。
-* 原文
+
+* COMMENT 原文
 #+BEGIN_SRC org
   File: org,  Node: Initial visibility,  Next: Catching invisible edits,  Prev: Global and local cycling,  Up: Visibility cycling
 

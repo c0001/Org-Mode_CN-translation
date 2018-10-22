@@ -1,4 +1,4 @@
-*  2.3.1 全局和本地循环折叠
+* 2.3.1 全局和本地循环折叠
 
   大纲模式使得在缓冲区隐藏一部分文字区域的设想变为可能。 Org仅仅使用两个命令， <TAB> 和 S-<TAB> 来切
   换可视化折叠视角。
@@ -31,7 +31,7 @@
 
 'C-u C-u <TAB>'      函数 ('org-set-startup-visibility')
 
-                     切换到缓冲区初始化的可视化转胎（请参阅 [[file:2-03-02_Initial-visibility.org][初始化可视状态设置]] ）
+                     切换到缓冲区初始化的可视化状态。（请参阅 [[file:2-03-02_Initial-visibility.org][初始化可视状态设置]] ）
 ----------------------------------------------------------------------------------------------------
 
 
@@ -82,7 +82,8 @@
 buffer中的那一部分如果被折叠的话是无法看到实时的同步预览的。
 
 [fn:1] 查看如果不是在标题栏中，TAB键的使用状态的选项设置变量 'org-cycle-emulate-tab'。
-* 原文
+
+* COMMENT 原文
   #+BEGIN_SRC org
     File: org,  Node: Global and local cycling,  Next: Initial visibility,  Up: Visibility cycling
 

@@ -37,7 +37,7 @@
 
                 *查阅 =org-goto-interface= 选项，获得更加详细的说明。*
 
-* 原文
+* COMMENT 原文
   #+BEGIN_EXAMPLE
     File: org.info,  Node: Motion,  Next: Structure editing,  Prev: Visibility cycling,  Up: Document structure
 

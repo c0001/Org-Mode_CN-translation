@@ -2,4 +2,73 @@
 
   使用下面列出的命令来在当前buffer中的其它标题栏间移动。
 
-  
+  =C-c C-n=     (=org-next-visible-heading=)
+               下一个可视的标题。
+
+  =C-c C-p=     (=org-previous-visible-heading=)
+                前一个可视标题。
+
+  =C-c C-f=     (=org-forward-same-level=)
+                前一个同级别的标题。
+
+  =C-c C-b=     (=org-backward-same-level=)
+                下一个同级别的标题
+
+  =C-c C-u=     (=outline-up-heading=)
+                回到上一个邻近的高一级标题。
+
+  =C-c C-j=     (=org-goto=)
+
+                使用当前buffer的一个复本作为操作对象，这些操作包括跳转到不同的位置，调整buffer的大纲折
+                叠视图等等。在这个buffer的复本中你可以使用如下的快捷键来进行这些操作：
+
+                <TAB>          切换标题循环视图。
+                <DOWN> / <UP>  下一个标题。（不按照层级跳转）
+                <RET>          选中这个标题。
+                /              进行大纲树的精简查找匹配。
+
+                以下的快捷键当且仅当你关闭了 =org-goto-auto-isearch= 后才能使用：
+
+                n / p          下一个或前一个可见标题。
+                f / b          下一个或前一个相同层级的标题。
+                u              前一个邻近的高一级标题。
+                0-9            数字输入。
+                q              推出 =org-goto= 模式。
+
+                *查阅 =org-goto-interface= 选项，获得更加详细的说明。*
+
+* 原文
+  #+BEGIN_EXAMPLE
+    File: org.info,  Node: Motion,  Next: Structure editing,  Prev: Visibility cycling,  Up: Document structure
+
+    2.4 Motion
+    ==========
+
+    The following commands jump to other headlines in the buffer.
+
+    ‘C-c C-n’     (‘org-next-visible-heading’)
+         Next heading.
+    ‘C-c C-p’     (‘org-previous-visible-heading’)
+         Previous heading.
+    ‘C-c C-f’     (‘org-forward-same-level’)
+         Next heading same level.
+    ‘C-c C-b’     (‘org-backward-same-level’)
+         Previous heading same level.
+    ‘C-c C-u’     (‘outline-up-heading’)
+         Backward to higher level heading.
+    ‘C-c C-j’     (‘org-goto’)
+         Jump to a different place without changing the current outline
+         visibility.  Shows the document structure in a temporary buffer,
+         where you can use the following keys to find your destination:
+              <TAB>         Cycle visibility.
+              <DOWN> / <UP>   Next/previous visible headline.
+              <RET>         Select this location.
+              /           Do a Sparse-tree search
+              The following keys work if you turn off ‘org-goto-auto-isearch’
+              n / p        Next/previous visible headline.
+              f / b        Next/previous headline same level.
+              u            One level up.
+              0-9          Digit argument.
+              q            Quit
+         See also the option ‘org-goto-interface’.
+  #+END_EXAMPLE

@@ -159,7 +159,7 @@
    同的功能。
 
 
-* 原文
+* COMMENT 原文
   #+BEGIN_EXAMPLE
     File: org.info,  Node: Structure editing,  Next: Sparse trees,  Prev: Motion,  Up: Document structure
 

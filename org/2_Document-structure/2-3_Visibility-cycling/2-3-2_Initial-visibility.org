@@ -11,7 +11,7 @@
   ,#+STARTUP: showeverything
   #+END_SRC
 
-  此外，任何带有可见属性（VISIBILIITY）的条目（参见[[file:../../Chapter-7_Properties-and-columns/index.org][属性和列显示模式]]）将会相应的调整它们的显示方式，
+  此外，任何带有可见属性（VISIBILIITY）的条目（参见[[file:../../7_Properties-and-columns/7_Properties-and-columns.org][属性和列显示模式]]）将会相应的调整它们的显示方式，
   这个属性的可用值是：
 
   - folded

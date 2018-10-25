@@ -27,7 +27,7 @@ Mode的朋友免除阅读方面的限制，开始建立这个基于Org Mode 9.1.
   - [[file:org/1_Introduction/1-3_Activation.org][1.3：激活]]
   - [[file:org/1_Introduction/1-4_Feedback.org][1.4：反馈]]
   - [[file:org/1_Introduction/1-5_Typesetting-coventions-used-in-this-manual.org][1.5：排版约定]]
-- [[file:org/2_Document-structure/index.org][第二章：文档结构]]
+- [[file:org/2_Document-structure/2_Document-structure.org][第二章：文档结构]]
   - [[file:org/2_Document-structure/2-1_Outlines.org][2.1：大纲]]
   - [[file:org/2_Document-structure/2-2_Headlines.org][2.2：标题栏]]
   - [[file:org/2_Document-structure/2-3_Visibility-cycling.org][2.3：可视化循环折叠]]

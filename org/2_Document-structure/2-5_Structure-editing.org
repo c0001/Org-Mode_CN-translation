@@ -1,3 +1,4 @@
+#+macro: kbd (eval (let ((var "$1")) (when (string-match "\\\\" var) (setq var (replace-regexp-in-string "\\\\" "" var))) (concat "@@html:<code>" var "</code>@@")))
 * 2.5 结构编辑
 ** 快捷键 =M-<RET>= 对应函数  ~(org-meta-return)~
 
@@ -72,7 +73,7 @@
    org元素。 例如： 在一个段落上触发 =M-h= 会高亮标记该段落，如果此时再次触发该命令会高亮标记下一个。
 
 
-** 快捷键 " C-c @ " 对应函数 ~(org-mark-subtree)~
+** 快捷键 {{{kbd(C-c \@)}}}  对应函数 ~(org-mark-subtree)~
    
    高亮标记当前子树。 同 =M-h= 一样重复触发这个命令会依此标记之下相同层级的子树。
 
@@ -96,7 +97,7 @@
 
    此命令使org内置的粘贴命令。
 
-   依据两个选项的值即 =org-yank-adjusted-subtrees= 和 =org-yank-folded-subtrees=， Org 内置的粘贴命
+   依据两个选项的值即 =org-yank-adjusted-subtrees= 和 =org-yank-folded-subtrees= ， Org 内置的粘贴命
    令将通过巧妙的方式粘贴子树并且将其折叠起来， 与命令 =C-c C-x C-y= 一样。
 
    默认情况下， 此命令使不会调整被粘贴的子树的层级的，但是当粘贴子树过长导致之前的内容被抛出在屏幕可
